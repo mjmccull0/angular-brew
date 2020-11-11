@@ -1,0 +1,25 @@
+<div class="header">
+  <h1>{{title}}</h1>
+  <form class="search" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <mat-icon aria-hidden="false" aria-label="search icon">search</mat-icon>
+    <input
+      type="search"
+      placeholder="Search..."
+      formControlName="search"
+      (input)="onSubmit()"
+    >
+  </form>
+</div>
+<div class="grid">
+  <div *ngFor="let beer of beers">
+    <a mat-button routerLink="/beer/{{beer.id}}" class="card-wrapper">
+      <div class="card">
+        <img class="media" alt={{beer.name}} src={{beer.image_url}} />
+        <div class="primaryText">
+          <h2 class="title">{{beer.name}}</h2>
+          <p class="description">{{beer.tagline}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

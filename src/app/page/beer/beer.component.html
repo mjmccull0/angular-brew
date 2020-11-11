@@ -1,0 +1,16 @@
+<div *ngIf="beer">
+  <div class="container">
+   <div class="beer">
+     <div class="primaryText">
+       <h1>{{beer.name}}</h1>
+       <p>{{beer.tagline}}</p>
+     </div>
+     <div class="media">
+       <img class="image" src={{beer.image_url}} alt="" />
+     </div>
+     <div class="description">
+       <p>{{beer.description}}</p>
+     </div>
+   </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.header {
+  background: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.2em;
+  margin: 0.67em 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  color: initial;
+  padding-top: 1rem;
+}
+.card * {
+  overflow: hidden;
+}
+
+.media {
+  object-fit: scale-down;
+  max-height: 200px;
+}
+
+.primaryText * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.card-wrapper {
+  display: block;
+}
+
+/* Search Form */
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.search input[type=search] {
+  display: flex;
+  flex-grow: 1;
+}
+
+
