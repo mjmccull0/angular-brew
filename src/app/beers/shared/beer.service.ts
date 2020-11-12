@@ -22,7 +22,6 @@ export class BeerService {
   }
 
   search(name: string): Observable<Beer[]> {
-    console.log(name);
     return this.http.get<Beer[]>(`${this.beersUrl}?beer_name=${name}`);
   }
 }
