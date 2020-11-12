@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { BeerService } from '../../service/beer.service';
-import { Beer } from '../../model/beer';
+import { Beer } from './shared/beer';
+import { BeerService } from './shared/beer.service';
 
 @Component({
   selector: 'app-beer-list',
