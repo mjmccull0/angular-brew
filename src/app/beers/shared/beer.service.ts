@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
+import { environment } from '../../../environments/environment';
 import { Beer } from './beer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BeerService {
-  beersUrl = 'https://api.punkapi.com/v2/beers';
+  beersUrl = environment.beersApiUrl;
 
   constructor(private http: HttpClient) { }
 
