@@ -46,7 +46,7 @@ testem.log
 Thumbs.db
 
 # Generated files
-./src/environments/environment.ts
+src/environments/environment.ts
 
 # Dev environment variables
 .env
