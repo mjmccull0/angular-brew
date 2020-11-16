@@ -9,4 +9,5 @@ export interface Beer {
   image_url: string;
   name: string;
   tagline: string;
+  url?: string;
 }

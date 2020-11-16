@@ -13,7 +13,7 @@ export class BeerListComponent implements OnInit {
   title = "Angular Brew";
 
   searchForm = new FormGroup({
-    search: new FormControl('')
+    beer_name: new FormControl('')
   });
 
   beers: Beer[];
@@ -25,12 +25,7 @@ export class BeerListComponent implements OnInit {
   }
 
   getBeers(): void {
-    this.beerService.getBeers()
-      .subscribe(beers => this.beers = beers);
-  }
-
-  onSubmit() {
-    this.beerService.search(this.searchForm.value.search)
+    this.beerService.getBeers(this.searchForm.value)
       .subscribe(beers => this.beers = beers);
   }
 

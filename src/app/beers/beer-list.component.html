@@ -1,18 +1,18 @@
 <div class="header">
   <h1>{{title}}</h1>
-  <form class="search" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <form class="search" [formGroup]="searchForm" (ngSubmit)="getBeers()">
     <mat-icon aria-hidden="false" aria-label="search icon">search</mat-icon>
     <input
       type="search"
       placeholder="Search..."
-      formControlName="search"
-      (input)="onSubmit()"
+      formControlName="beer_name"
+      (input)="getBeers()"
     >
   </form>
 </div>
 <div class="grid">
   <div *ngFor="let beer of beers">
-    <a mat-button routerLink="/beer/{{beer.id}}" class="card-wrapper">
+    <a mat-button routerLink="{{beer.url}}" class="card-wrapper">
       <div class="card">
         <img class="media" alt={{beer.name}} src={{beer.image_url}} />
         <div class="primaryText">
