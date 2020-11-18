@@ -1,0 +1,17 @@
+.card {
+  width: 300px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.primaryText * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.media {
+  height: 120px;
+}
+.viewport {
+  height: 280px;
+}

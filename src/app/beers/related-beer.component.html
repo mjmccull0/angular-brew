@@ -1,0 +1,16 @@
+<div *ngIf="beers?.length" class="related-beer container">
+  <h1>{{title}}</h1>
+  <cdk-virtual-scroll-viewport #viewport orientation="horizontal" itemSize="300" class="viewport">
+    <div *cdkVirtualFor="let beer of beers">
+      <a mat-button routerLink="{{beer.url}}" class="card-wrapper">
+        <div class="card">
+          <img class="media" alt={{beer.name}} src={{beer.image_url}} />
+          <div class="primaryText">
+            <h2 class="title">{{beer.name}}</h2>
+            <p class="description">{{beer.tagline}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
