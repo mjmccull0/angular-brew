@@ -8,7 +8,7 @@ import { BeerService } from './shared/beer.service';
   templateUrl: './related-beer.component.html',
   styleUrls: ['./related-beer.component.css']
 })
-export class RelatedBeerComponent implements OnInit, OnChanges {
+export class RelatedBeerComponent implements OnChanges {
   @ViewChild('viewport')
   viewport: CdkVirtualScrollViewport;
 
