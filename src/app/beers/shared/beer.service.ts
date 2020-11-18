@@ -12,7 +12,7 @@ import { Beer } from './beer';
 export class BeerService {
   beersUrl = environment.beersApiUrl;
   beerBaseUrl = environment.beerBaseUrl;
-  validQueryParams = [ "beer_name" ];
+  validQueryParams = [ "beer_name", "srm", "abv" ];
 
   constructor(private http: HttpClient) { }
 
@@ -33,13 +33,23 @@ export class BeerService {
     return this.http.get<Beer>(`${this.beersUrl}/${id}`);
   }
 
+  getRelatedBeer({beer, relation}) {
+    const id = beer.id;
+    return this.getBeers({[relation]: beer[relation]})
+      .pipe(
+        map((beers) => (
+          beers.filter(beer => beer.id !== id)
+        ))
+      );
+  }
+
   queryBuilder(params: object): string {
     const queryParams = {};
 
     Object.keys(params).forEach(key => {
       if (this.validQueryParams.includes(key) &&
-          params[key] !== ("" || undefined || null)) {
-        queryParams[key] = params[key];
+          params[key] !== (undefined || null || "")) {
+          queryParams[key] = params[key];
       }
     });
 
