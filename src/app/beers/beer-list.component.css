@@ -50,11 +50,21 @@
 .search {
   display: flex;
   flex-direction: row;
+  align-self: center;
 }
 
-.search input[type=search] {
+.icon-search {
+  align-self: center;
+}
+
+.search input {
   display: flex;
   flex-grow: 1;
+  min-height: 24px;
 }
 
-
+.icon-clear-name-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: -24px;
+}
