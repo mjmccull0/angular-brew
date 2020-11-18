@@ -3,6 +3,7 @@ export interface Beer {
   brewers_tips: string;
   description: string;
   ebc: number;
+  srm: number;
   first_brewed: string;
   ibu: number;
   id: number;
