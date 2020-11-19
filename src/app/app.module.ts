@@ -11,6 +11,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BeerListComponent } from './beers/beer-list.component';
 import { BeerComponent } from './beers/beer.component';
 import { RelatedBeerComponent } from './beers/related-beer.component';
+import { CardComponent } from './beers/shared/card/card.component';
 
 
 
@@ -20,6 +21,7 @@ import { RelatedBeerComponent } from './beers/related-beer.component';
     BeerListComponent,
     BeerComponent,
     RelatedBeerComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

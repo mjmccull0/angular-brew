@@ -30,14 +30,12 @@
 </div>
 <div class="grid">
   <div *ngFor="let beer of beers">
-    <a mat-button routerLink="{{beer.url}}" class="card-wrapper">
-      <div class="card">
-        <img class="media" alt={{beer.name}} src={{beer.image_url}} />
-        <div class="primaryText">
-          <h2 class="title">{{beer.name}}</h2>
-          <p class="description">{{beer.tagline}}</p>
-        </div>
-      </div>
-    </a>
+    <beer-card
+     href={{beer.url}}
+     imageAlt="{{beer.name}} image"
+     imageSrc={{beer.image_url}}
+     title={{beer.name}}
+     description={{beer.tagline}}
+    ></beer-card>
   </div>
 </div>
