@@ -1,0 +1,9 @@
+<a mat-button routerLink="{{href}}" class="card-wrapper">
+  <div class="card">
+    <img class="media" alt={{imageAlt}} src={{imageSrc}} />
+    <div class="primaryText">
+      <h2 class="title">{{title}}</h2>
+      <p *ngIf="description" class="description">{{description}}</p>
+    </div>
+  </div>
+</a>

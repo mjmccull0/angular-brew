@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  color: initial;
+  width: 300px;
+}
+
+.card-wrapper {
+  display: block;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card * {
+  overflow: hidden;
+}
+
+.media {
+  object-fit: scale-down;
+  max-height: 200px;
+}
+
+.primaryText * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  text-transform: uppercase;
+}
