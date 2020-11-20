@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, ViewChild } from '@angular/core';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
-import { Beer } from './shared/beer';
-import { BeerService } from './shared/beer.service';
+import { Beer } from '../shared/beer';
+import { BeerService } from '../shared/beer.service';
 
 @Component({
   selector: 'related-beer',

@@ -8,10 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { BeerListComponent } from './beers/beer-list.component';
-import { BeerComponent } from './beers/beer.component';
-import { RelatedBeerComponent } from './beers/related-beer.component';
-import { CardComponent } from './beers/shared/card/card.component';
+import { BeerListComponent } from './beers/beer-list/beer-list.component';
+import { BeerComponent } from './beers/beer/beer.component';
+import { RelatedBeerComponent } from './beers/related-beer/related-beer.component';
+import { CardComponent } from './beers/card/card.component';
 
 
 
