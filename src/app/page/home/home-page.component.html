@@ -1,0 +1,33 @@
+<div class="header">
+  <h1>{{title}}</h1>
+  <form class="search" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <mat-icon
+      class="icon-search"
+      aria-hidden="false"
+      aria-label="search icon">
+      search
+    </mat-icon>
+
+    <input type="text" 
+      placeholder="Search..."
+      formControlName="beer_name"
+      (input)="onSubmit()"
+    >
+    
+    <span
+      *ngIf="searchForm.controls['beer_name'].value"
+      class="icon-clear-name-wrapper"
+      >
+      <mat-icon
+        aria-hidden="false"
+        aria-label="close icon"
+        (click)="clearBeerName()"
+      >
+        close
+      </mat-icon>
+    </span>
+  </form>
+</div>
+
+<brew-beer-list [beers]="beers">
+</brew-beer-list>

@@ -9,9 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BeerListComponent } from './beers/beer-list/beer-list.component';
-import { BeerComponent } from './beers/beer/beer.component';
+import { BeerDetailComponent } from './beers/beer-detail/beer-detail.component';
 import { RelatedBeerComponent } from './beers/related-beer/related-beer.component';
 import { CardComponent } from './beers/card/card.component';
+import { HomePage } from './page/home/home-page.component';
+import { BeerPage } from './page/beer/beer-page.component';
 
 
 
@@ -19,9 +21,11 @@ import { CardComponent } from './beers/card/card.component';
   declarations: [
     AppComponent,
     BeerListComponent,
-    BeerComponent,
+    BeerDetailComponent,
     RelatedBeerComponent,
     CardComponent,
+    HomePage,
+    BeerPage,
   ],
   imports: [
     BrowserModule,

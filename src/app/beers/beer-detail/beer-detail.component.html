@@ -14,27 +14,3 @@
    </div>
   </div>
 </div>
-
-<related-beer
-  *ngIf="beer?.abv"
-  title="Similar based on ABV"
-  relation="abv"
-  [beer]="beer"
->
-</related-beer>
-
-<related-beer
-  *ngIf="beer?.ibu"
-  title="Similar based on IBU"
-  relation="ibu"
-  [beer]="beer"
->
-</related-beer>
-
-<related-beer
-  *ngIf="beer?.srm"
-  title="Similar based on Color"
-  relation="srm"
-  [beer]="beer"
->
-</related-beer>

@@ -1,18 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Beer } from '../shared/beer';
-import { BeerService } from '../shared/beer.service';
+import { Beer } from 'shared/beer';
+import { BeerService } from 'shared/beer.service';
 
 @Component({
-  selector: 'app-beer',
-  templateUrl: './beer.component.html',
-  styleUrls: ['./beer.component.css']
+  selector: 'beer-page',
+  templateUrl: './beer-page.component.html',
+  styleUrls: ['./beer-page.component.css']
 })
+export class BeerPage implements OnInit {
 
-
-export class BeerComponent implements OnInit {
-  @Input() beer: Beer;
+  beer: Beer;
 
   constructor(
     private route: ActivatedRoute,
