@@ -1,6 +1,31 @@
 <div *ngIf="beers?.length" class="related-beer container">
   <h1>{{title}}</h1>
-  <cdk-virtual-scroll-viewport #viewport orientation="horizontal" itemSize="300" class="viewport">
+  <div class="scroll-control">
+    <button mat-button>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="scroll left icon"
+        (click)="scrollLeft()"
+      >
+        keyboard_arrow_left 
+      </mat-icon>
+    </button>
+    <button mat-button>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="scroll right icon"
+        (click)="scrollRight()"
+      >
+        keyboard_arrow_right 
+      </mat-icon>
+    </button>
+  </div>
+  <cdk-virtual-scroll-viewport #viewport
+    orientation="horizontal"
+    itemSize="332"
+    (scrolledIndexChange)="onScroll($event)"
+    class="viewport"
+  >
     <div *cdkVirtualFor="let beer of beers">
       <beer-card
        href={{beer.url}}

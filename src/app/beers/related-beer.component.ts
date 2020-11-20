@@ -11,6 +11,7 @@ import { BeerService } from './shared/beer.service';
 export class RelatedBeerComponent implements OnChanges {
   @ViewChild('viewport')
   viewport: CdkVirtualScrollViewport;
+  scrollIndex = 0;
 
   @Input() title: string;
   @Input() relation;
@@ -24,7 +25,7 @@ export class RelatedBeerComponent implements OnChanges {
     this.getBeers();
 
     if (this.viewport) {
-      this.viewport.scrollToIndex(0);
+      this.viewport.scrollToIndex(this.scrollIndex);
     }
   }
 
@@ -34,6 +35,22 @@ export class RelatedBeerComponent implements OnChanges {
       beer: this.beer
     })
       .subscribe(beers => this.beers = beers);
+  }
+
+  onScroll(event): void {
+    this.scrollIndex = event;
+  }
+
+  scrollLeft(): void {
+    if (this.scrollIndex > 0) {
+      this.viewport.scrollToIndex(--this.scrollIndex, "smooth");
+    }
+  }
+
+  scrollRight(): void {
+    if (this.beers.length > this.scrollIndex) {
+      this.viewport.scrollToIndex(++this.scrollIndex, "smooth");
+    }
   }
 
 }
