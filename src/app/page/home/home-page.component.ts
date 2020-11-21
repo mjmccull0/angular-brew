@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Beer } from 'shared/beer';
-import { BeerService } from 'shared/beer.service';
+import { Beer } from 'model/beer';
+import { BeerService } from 'service/beer/beer.service';
 
 @Component({
   selector: 'brew-home',

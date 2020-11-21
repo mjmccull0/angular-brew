@@ -11,7 +11,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BeerListComponent } from './beers/beer-list/beer-list.component';
 import { BeerDetailComponent } from './beers/beer-detail/beer-detail.component';
 import { RelatedBeerComponent } from './beers/related-beer/related-beer.component';
-import { CardComponent } from './beers/card/card.component';
+import { CardComponent } from 'component/card/card.component';
 import { HomePage } from './page/home/home-page.component';
 import { BeerPage } from './page/beer/beer-page.component';
 

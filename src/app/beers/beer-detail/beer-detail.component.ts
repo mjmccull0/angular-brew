@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Beer } from 'shared/beer';
+import { Beer } from 'model/beer';
 
 @Component({
   selector: 'beer-detail',

@@ -17,11 +17,20 @@
       "dom"
     ],
     "paths": {
+      "component/*": [
+        "./src/app/shared/component/*"
+      ],
       "environments/*": [
         "./src/environments/*"
       ],
       "shared/*": [
         "./src/app/shared/*"
+      ],
+      "model/*": [
+        "./src/app/shared/model/*"
+      ],
+      "service/*": [
+        "./src/app/shared/service/*"
       ]
     }
   }
