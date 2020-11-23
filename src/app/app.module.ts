@@ -14,6 +14,7 @@ import { RelatedBeerComponent } from './beers/related-beer/related-beer.componen
 import { CardComponent } from 'component/card/card.component';
 import { HomePage } from './page/home/home-page.component';
 import { BeerPage } from './page/beer/beer-page.component';
+import { PageContainerComponent } from './shared/component/page-container/page-container.component';
 
 
 
@@ -26,6 +27,7 @@ import { BeerPage } from './page/beer/beer-page.component';
     CardComponent,
     HomePage,
     BeerPage,
+    PageContainerComponent,
   ],
   imports: [
     BrowserModule,
