@@ -10,6 +10,8 @@ Experiment with Angular.
 
 ![desktop detail](https://user-images.githubusercontent.com/42848059/98861580-8815e380-2433-11eb-8a84-189ac055b4bc.png)
 
+![desktop related](https://user-images.githubusercontent.com/42848059/99986049-b4f3c000-2d7c-11eb-9a87-83e834b86057.png)
+
 ![mobile search](https://user-images.githubusercontent.com/42848059/98861616-982dc300-2433-11eb-825e-3c863d985af4.png)
 
 ![mobile detail](https://user-images.githubusercontent.com/42848059/98861640-a4198500-2433-11eb-9755-618b9576cec3.png)
