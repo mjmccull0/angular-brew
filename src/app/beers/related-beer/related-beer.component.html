@@ -1,20 +1,25 @@
 <div *ngIf="beers?.length" class="related-beer container">
   <h1>{{title}}</h1>
   <div class="scroll-control">
-    <button mat-button>
+    <button mat-button
+      (click)="scrollLeft()"
+      [disabled]="scrollLeftDisabled"
+    >
       <mat-icon
         aria-hidden="false"
         aria-label="scroll left icon"
-        (click)="scrollLeft()"
       >
         keyboard_arrow_left 
       </mat-icon>
     </button>
-    <button mat-button>
+    <button
+      mat-button
+      (click)="scrollRight()"
+      [disabled]="scrollRightDisabled"
+    >
       <mat-icon
         aria-hidden="false"
         aria-label="scroll right icon"
-        (click)="scrollRight()"
       >
         keyboard_arrow_right 
       </mat-icon>
@@ -22,7 +27,7 @@
   </div>
   <cdk-virtual-scroll-viewport #viewport
     orientation="horizontal"
-    itemSize="332"
+    itemSize={{itemSize}}
     (scrolledIndexChange)="onScroll($event)"
     class="viewport"
   >
