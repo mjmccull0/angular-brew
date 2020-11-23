@@ -1,29 +1,31 @@
-<beer-detail [beer]="beer">
-</beer-detail>
+<brew-page-container>
+  <beer-detail [beer]="beer">
+  </beer-detail>
 
-<related-beer
-  *ngIf="beer?.abv"
-  title="Similar based on ABV"
-  relation="abv"
-  [beer]="beer"
-  itemSize="332"
->
-</related-beer>
+  <related-beer
+    *ngIf="beer?.abv"
+    title="Similar based on ABV"
+    relation="abv"
+    [beer]="beer"
+    itemSize="332"
+  >
+  </related-beer>
 
-<related-beer
-  *ngIf="beer?.ibu"
-  title="Similar based on IBU"
-  relation="ibu"
-  [beer]="beer"
-  itemSize="332"
->
-</related-beer>
+  <related-beer
+    *ngIf="beer?.ibu"
+    title="Similar based on IBU"
+    relation="ibu"
+    [beer]="beer"
+    itemSize="332"
+  >
+  </related-beer>
 
-<related-beer
-  *ngIf="beer?.srm"
-  title="Similar based on Color"
-  relation="srm"
-  [beer]="beer"
-  itemSize="332"
->
-</related-beer>
+  <related-beer
+    *ngIf="beer?.srm"
+    title="Similar based on Color"
+    relation="srm"
+    [beer]="beer"
+    itemSize="332"
+  >
+  </related-beer>
+</brew-page-container>
